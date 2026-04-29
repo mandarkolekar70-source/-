@@ -635,6 +635,7 @@ body {
   .logo-emblem { width: 42px; height: 42px; font-size: 18px; }
   .logo-text h1 { font-size: 1.1rem; }
   .logo-text p { font-size: 0.7rem; }
+  .hamburger span { background: var(--navy); }
   
   /* Marquee Clutter Fix */
   .marquee-wrapper { padding: 8px 0; }
