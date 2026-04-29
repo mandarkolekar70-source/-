@@ -595,24 +595,40 @@ body {
   .header-contact { display: none; }
   .hamburger { display: block; }
   
-  /* Sliding Drawer Styles */
-  .main-nav .nav-inner { position: static; }
+  /* Sliding Drawer Styles -> Centered Card Styles */
+  .nav-overlay {
+    position: fixed; inset: 0;
+    background: linear-gradient(180deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+    z-index: 998; opacity: 0; visibility: hidden; transition: var(--transition);
+  }
+  .nav-overlay.open { opacity: 1; visibility: visible; }
+
   .nav-links {
-    position: fixed; top: 0; right: 0; left: auto; width: 280px; height: 100vh;
-    background: linear-gradient(180deg, var(--green-dark) 0%, var(--navy) 100%);
-    flex-direction: column; padding: 80px 20px 30px;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.2);
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1001; overflow-y: auto; display: flex;
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    width: 90%; max-width: 340px; height: auto;
+    background: white; border-radius: 20px;
+    flex-direction: column; padding: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    z-index: 1001; opacity: 0; visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
   }
-  .nav-links.open { transform: translateX(0); }
+  .nav-links.open { transform: translate(-50%, -50%); opacity: 1; visibility: visible; }
+  
   .nav-links a {
-    padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 1rem; border-radius: 8px; margin-bottom: 4px;
+    color: var(--text-dark) !important;
+    text-align: left;
+    padding: 14px 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    width: 100%;
+    display: block;
   }
+  .nav-links a:last-child { border-bottom: none; }
   .nav-links a::after { display: none; }
-  .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); padding-left: 28px; }
+  .nav-links a:hover, .nav-links a.active { background: #f8f9fa; color: var(--green-flag) !important; padding-left: 15px; }
   
   /* Header & Logo Scaling */
   .site-header { padding: 10px 0; }
