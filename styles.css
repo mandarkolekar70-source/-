@@ -598,34 +598,56 @@ body {
   /* Sliding Drawer Styles */
   .main-nav .nav-inner { position: static; }
   .nav-links {
-    position: fixed; top: 0; right: -300px; width: 280px; height: 100vh;
+    position: fixed; top: 0; right: 0; left: auto; width: 280px; height: 100vh;
     background: linear-gradient(180deg, var(--green-dark) 0%, var(--navy) 100%);
     flex-direction: column; padding: 80px 20px 30px;
     box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+    transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001; overflow-y: auto; display: flex;
   }
-  .nav-links.open { transform: translateX(-300px); }
+  .nav-links.open { transform: translateX(0); }
   .nav-links a {
-    padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.08);
     font-size: 1rem; border-radius: 8px; margin-bottom: 4px;
   }
   .nav-links a::after { display: none; }
   .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); padding-left: 28px; }
   
-  .page-hero h2 { font-size: 1.6rem; }
+  /* Header & Logo Scaling */
+  .site-header { padding: 10px 0; }
+  .logo-emblem { width: 42px; height: 42px; font-size: 18px; }
+  .logo-text h1 { font-size: 1.1rem; }
+  .logo-text p { font-size: 0.7rem; }
+  
+  /* Marquee Clutter Fix */
+  .marquee-wrapper { padding: 8px 0; }
+  .marquee-content { gap: 15px; }
+  .marquee-img { width: 24px; height: 24px; }
+  .marquee-item { font-size: 0.85rem; gap: 6px; }
+
+  /* Premium Tables Adjustments */
+  .table-wrapper { 
+    width: 100%; border-radius: 8px; 
+    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.2); 
+  }
+  .premium-table { min-width: 500px; }
+  .premium-table th, .premium-table td { padding: 12px 10px; font-size: 0.85rem; }
+
+  .page-hero { padding: 40px 20px; }
+  .page-hero h2 { font-size: 1.5rem; }
   .hero-slider { height: 350px; }
   .slide-content h2 { font-size: 1.6rem; }
   .counter-item .count { font-size: 2rem; }
   .members-grid { grid-template-columns: 1fr 1fr; }
-  .logo-text h1 { font-size: 1rem; }
+  
+  /* FAB Size adjustment */
   .fab-container { bottom: 20px; right: 20px; }
-  .marquee-img { width: 28px; height: 28px; }
+  .fab-btn { width: 42px; height: 42px; font-size: 1.1rem; }
 }
 @media (max-width: 480px) {
   .members-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .nav-links { width: 250px; right: -270px; }
-  .nav-links.open { transform: translateX(-270px); }
+  .nav-links { width: 250px; }
 }
