@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ग्रामपंचायत विषयी - Uttur Grampanchayat</title>
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/uttur-logo1.PNG">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Your main site CSS (IMPORTANT for footer & buttons) -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+<style>
+/* -------------------------------------------
+   🇮🇳 CONTINUOUS INDIAN FLAG (HEADER ONLY)
+-------------------------------------------- */
+.flag-wrapper {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,153,51,0.9) 0%,
+    rgba(255,153,51,0.9) 35%,
+    rgba(255,255,255,0.95) 50%,
+    rgba(255,255,255,0.95) 65%,
+    rgba(19,136,8,0.9) 100%
+  );
+}
+
+/* ⚠️ IMPORTANT:
+   Override styles ONLY INSIDE HEADER AREA
+   Footer & page buttons remain untouched
+*/
+.flag-wrapper .marquee-section,
+.flag-wrapper .navbar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Marquee */
+.marquee-logo {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+.text-title {
+  color: #000;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.85);
+}
+
+/* Navbar text */
+.flag-wrapper .header-title,
+.flag-wrapper .nav-link {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.flag-wrapper .nav-link:hover {
+  color: #000080 !important;
+}
+
+/* Mobile menu background (only header navbar) */
+@media (max-width: 992px) {
+  .flag-wrapper #mainNav {
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🇮🇳 HEADER WITH COMMON FLAG BACKGROUND -->
+<div class="flag-wrapper">
+
+  <!-- 🔝 TOP MARQUEE -->
+  <div class="marquee-section py-3">
+    <div class="container d-flex flex-wrap justify-content-center align-items-center gap-4 text-center">
+
+      <img src="/assets/images/maharaj_s.jpg" class="marquee-logo" alt="maharaj">
+      <img src="/assets/images/gadgemaharaj.jpg" class="marquee-logo" alt="Gadge Maharaj">
+      <img src="/assets/images/ambedkar_d.jpg" class="marquee-logo" alt="Ambedkar">
+
+      <span class="fs-4 text-title animate__animated animate__fadeInDown">
+        <i class="fas fa-landmark me-2"></i>
+        ग्रामपंचायत कसबा उत्तूर, ता. आजरा, जि. कोल्हापूर
+        <i class="fas fa-landmark ms-2"></i>
+      </span>
+
+      <img src="/assets/images/jijavu.jpg" class="marquee-logo" alt="Jijau">
+      <img src="/assets/images/savitribai.png" class="marquee-logo" alt="Savitribai">
+      <img src="/assets/images/shahu_m.jpg" class="marquee-logo" alt="Shahu Maharaj">
+
+    </div>
+  </div>
+
+  <!-- 🔽 NAVBAR (original classes preserved) -->
+  <nav class="navbar navbar-expand-lg navbar-maroon">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center" href="/index.php">
+        <img src="/assets/images/uttur-logo1.PNG" class="header-logo me-2" alt="Logo">
+        <span class="header-title">ग्रामपंचायत उत्तूर || क ||</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item"><a class="nav-link" href="/index.php">मुख्यपृष्ठ</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.php">ग्रामपंचायत</a></li>
+          <li class="nav-item"><a class="nav-link" href="/vision-mission.php">दृष्टी • उद्दिष्टे</a></li>
+          <li class="nav-item"><a class="nav-link" href="/members.php">सदस्य</a></li>
+          <li class="nav-item"><a class="nav-link" href="/doctors.php">डॉक्टर्स</a></li>
+          <li class="nav-item"><a class="nav-link" href="/sarpanch.php">कार्यकाळ</a></li>
+          <li class="nav-item"><a class="nav-link" href="/schools.php">शाळा</a></li>
+          <li class="nav-item"><a class="nav-link" href="/mandir.php">प्रार्थनीय स्थळे</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.php">संपर्क</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+</div>
+<!-- 🇮🇳 HEADER END -->
+
+
+<section class="container text-center my-5" data-aos="fade-up">
+  <h2 class="section-title">उत्तूर ग्रामपंचायत विषयी</h2>
+</section>
+<main class="container my-5">
+
+  <!-- Header Section -->
+  <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+    
+    <p class="fs-5 text-muted mt-3">ग्रामपंचायत हा स्थानिक स्वराज्य संस्थेचा <strong>मूलभूत घटक</strong> असून, <strong>उत्तूर ग्रामपंचायत</strong> गावाच्या सर्वांगीण विकासासाठी <strong>समर्पित</strong> आहे. उद्देश नागरिकांना <strong>पारदर्शक, कार्यक्षम व जलद प्रशासन</strong> प्रदान करणे आहे.</p>
+  </div>
+
+  <!-- Responsibilities & Office Section -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-6" data-aos="fade-right" data-aos-duration="800">
+      <div class="card shadow-sm h-100 border-start border-4 border-success transition-card">
+        <div class="card-body">
+          <h4 class="card-title text-success fw-semibold"><i class="bi bi-check-circle-fill me-2"></i>मुख्य जबाबदाऱ्या</h4>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item"><strong>सफाई व स्वच्छता:</strong> गावातील रस्ते, गल्ली व सार्वजनिक ठिकाणे स्वच्छ ठेवणे.</li>
+            <li class="list-group-item"><strong>पाणीपुरवठा:</strong> शुद्ध पिण्याचे पाणी गावातील प्रत्येक घरापर्यंत पोहचविणे.</li>
+            <li class="list-group-item"><strong>शैक्षणिक सुविधा:</strong> शाळा, उपशाळा व इतर शैक्षणिक उपक्रमांचे आयोजन व विकास.</li>
+            <li class="list-group-item"><strong>आरोग्य सुविधा:</strong> प्राथमिक आरोग्य केंद्रे, लसीकरण मोहिमा आणि आरोग्यविषयक जनजागृती.</li>
+            <li class="list-group-item"><strong>गावाचा विकास:</strong> रस्ते, सार्वजनिक बांधकामे, नाल्यांची देखभाल व इतर सुविधा सुनिश्चित करणे.</li>
+            <li class="list-group-item"><strong>शासनाच्या योजनांची अंमलबजावणी:</strong> केंद्र व राज्य सरकारच्या योजना गावापर्यंत पोहोचवणे.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
+      <div class="card shadow-sm h-100 border-start border-4 border-warning transition-card">
+        <div class="card-body">
+          <h4 class="card-title text-warning fw-semibold"><i class="bi bi-clock-fill me-2"></i>कार्यालयीन वेळा</h4>
+          <p class="fs-5 mt-3"><strong>सोमवार - शनिवार:</strong> सकाळी 09:45 — सायंकाळी 05:45</p>
+
+          <h4 class="card-title text-info fw-semibold mt-4"><i class="bi bi-telephone-fill me-2"></i>संपर्क</h4>
+          <p class="fs-6 mt-2">
+            ग्रामपंचायत कार्यालयात भेट देण्यासाठी किंवा माहिती मिळवण्यासाठी संपर्क करा:<br>
+            <strong>फोन:</strong> 📞 +91 8766737765 <br>
+            <strong>ई-मेल:</strong> Utturgram@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Uttur Gram Panchayat Info Cards -->
+ <section class="container my-5">
+ 
+  <section class="container text-center my-5" data-aos="fade-up">
+  <h2 class="section-title">सविस्तर माहिती</h2>
+</section>
+  <div class="row g-4">
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏘️</div>
+        <h5 class="fw-semibold">ग्रामपंचायत</h5>
+        <p class="mb-0">उत्तूर</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">📅</div>
+        <h5 class="fw-semibold">ग्रामपंचायत स्थापना</h5>
+        <p class="mb-0">१४/०५/१९५२</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">📏</div>
+        <h5 class="fw-semibold">क्षेत्रफळ</h5>
+        <p class="mb-0">८ हेक्टर २२ आर</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🗺️</div>
+        <h5 class="fw-semibold">तालुका</h5>
+        <p class="mb-0">आजरा</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏛️</div>
+        <h5 class="fw-semibold">जिल्हा</h5>
+        <p class="mb-0">कोल्हापूर</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🗾</div>
+        <h5 class="fw-semibold">राज्य</h5>
+        <p class="mb-0">महाराष्ट्र</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">👥</div>
+        <h5 class="fw-semibold">लोकसंख्या</h5>
+        <p class="mb-0">७७८०(२०११ च्या जनगणनेनुसार)</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">👨</div>
+        <h5 class="fw-semibold">पुरुष</h5>
+        <p class="mb-0">३८०८</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">👩</div>
+        <h5 class="fw-semibold">स्त्री</h5>
+        <p class="mb-0">३९७२</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏠</div>
+        <h5 class="fw-semibold">कुटुंब संख्या</h5>
+        <p class="mb-0">२२७०</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🗳️</div>
+        <h5 class="fw-semibold">मतदारांची संख्या</h5>
+        <p class="mb-0">७३८३</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🌾</div>
+        <h5 class="fw-semibold">लागवडी योग्य क्षेत्र</h5>
+        <p class="mb-0">७२३ हेक्टर ७ आर</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🌿</div>
+        <h5 class="fw-semibold">बागायत क्षेत्र</h5>
+        <p class="mb-0">-</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">💡</div>
+        <h5 class="fw-semibold">स्ट्रीट लाईट पोल</h5>
+        <p class="mb-0">५४६</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏫</div>
+        <h5 class="fw-semibold">अंगणवाडी</h5>
+        <p class="mb-0">४</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏫</div>
+        <h5 class="fw-semibold">जिल्हा परिषद शाळा</h5>
+        <p class="mb-0">२</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">📮</div>
+        <h5 class="fw-semibold">पोस्ट ऑफिस</h5>
+        <p class="mb-0">१</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">📄</div>
+        <h5 class="fw-semibold">तलाठी ऑफिस</h5>
+        <p class="mb-0">१</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏥</div>
+        <h5 class="fw-semibold">आरोग्य उपकेंद्र</h5>
+        <p class="mb-0">१</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🚰</div>
+        <h5 class="fw-semibold">नळ कनेक्शन</h5>
+        <p class="mb-0">१८७५</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">💧</div>
+        <h5 class="fw-semibold">सार्वजनिक विहीर</h5>
+        <p class="mb-0">२</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🛠️</div>
+        <h5 class="fw-semibold">सार्वजनिक बोअर</h5>
+        <p class="mb-0">५</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-right" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">👩‍💼</div>
+        <h5 class="fw-semibold">महिला बचत गट</h5>
+        <p class="mb-0">१००+</p>
+      </div>
+    </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-left" data-aos-duration="900">
+      <div class="info-card p-4 shadow-sm rounded transition-card text-center">
+        <div class="emoji mb-2">🏡</div>
+        <h5 class="fw-semibold">प्रधानमंत्री घरकुल</h5>
+        <p class="mb-0">११</p>
+      </div>
+    </div>
+      </div>
+  </section>
+  
+      </main>
+<!-- ✅ AOS Animation Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+<style>
+.info-card {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.info-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.info-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(13,110,253,0.1), rgba(25,135,84,0.1));
+  transition: all 0.6s ease;
+}
+.info-card:hover::after {
+  left: 100%;
+}
+.emoji {
+  font-size: 2.2rem;
+  animation: floatEmoji 3s ease-in-out infinite;
+}
+@keyframes floatEmoji {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+/* .section-title::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 3px;
+  background-color: #0a2342;
+  margin: 8px auto 0; 
+ border-radius: 3px;
+} */
+
+header {
+        color: #0056b3;
+        padding: 30px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+        background: #ffffffb0;
+        backdrop-filter: blur(8px);
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+        animation: fadeSlideIn 1.5s ease forwards;
+    }
+    @keyframes fadeSlideIn {
+        0% { opacity: 0; transform: translateY(-40px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+   @media (max-width: 768px) {
+        header { font-size: 22px; padding: 20px; }
+    }
+
+</style>
+
+
+<!-- FOOTER -->
+<footer class="footer-navy text-white mt-5 position-relative">
+    <center>
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-md-4">
+        <h6 class="fw-bold">पत्ता</h6>
+        <p class="mb-0">उत्तूर ग्रामपंचायत उत्तूर , ता. आजरा , जि. कोल्हापूर</p>
+        <p class="mb-0">📞 +91 8766737765</p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold">महत्वाच्या लिंक्स</h6>
+        <ul class="list-unstyled mb-0">
+          <li><a href="vision-mission.php">दृष्टी • उद्दिष्टे</a></li>
+          <li><a href="members.php">सदस्य</a></li>
+          <li><a href="notices.php">चालू घडामोडी</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold">सोशल मीडिया</h6>
+        <a href="https://www.facebook.com" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/aapl_uttur?igsh=MXJza3NqdnB0dGVnNw==" class="text-white"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <small>©️ 2025 Uttur Grampanchayat. सर्व हक्क राखीव.</small>
+    </div>
+  </div>
+<br><br>
+  <!-- Watermark-style Developer Credit -->
+  <div class="developer-credit">
+      
+    💻 Designed & Developed by <b>MindTrinova AI Solutions Pvt. Ltd.</b> 🌐
+  </div>
+  </center>
+</footer>
+
+<!-- CSS -->
+<style>
+.footer-navy {
+  position: relative;
+  overflow: hidden;
+}
+.footer-navy a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-navy a:hover {
+  color: #ffd700;
+}
+.developer-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 15px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  color: #f8f9fa;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+.developer-credit:hover {
+  opacity: 1;
+  color: #00bcd4;
+}
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

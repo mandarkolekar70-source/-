@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="उत्तूर ग्रामपंचायत विषयी सविस्तर माहिती - स्थापना, लोकसंख्या, सुविधा">
+  <title>ग्रामपंचायत विषयी - Uttur Grampanchayat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="page-hero"></div>
+
+  <div class="container">
+    <div class="info-card fade-in">
+      <h3>🏛️ उत्तूर ग्रामपंचायत विषयी</h3>
+      <p>ग्रामपंचायत हा स्थानिक स्वराज्य संस्थेचा मूलभूत घटक असून, उत्तूर ग्रामपंचायत गावाच्या सर्वांगीण विकासासाठी समर्पित आहे. उद्देश नागरिकांना पारदर्शक, कार्यक्षम व जलद प्रशासन प्रदान करणे आहे.</p>
+    </div>
+
+    <div class="info-card fade-in">
+      <h3>📋 मुख्य जबाबदाऱ्या</h3>
+      <ul>
+        <li>सफाई व स्वच्छता: गावातील रस्ते, गल्ली व सार्वजनिक ठिकाणे स्वच्छ ठेवणे.</li>
+        <li>पाणीपुरवठा: शुद्ध पिण्याचे पाणी गावातील प्रत्येक घरापर्यंत पोहचविणे.</li>
+        <li>शैक्षणिक सुविधा: शाळा, उपशाळा व इतर शैक्षणिक उपक्रमांचे आयोजन व विकास.</li>
+        <li>आरोग्य सुविधा: प्राथमिक आरोग्य केंद्रे, लसीकरण मोहिमा आणि आरोग्यविषयक जनजागृती.</li>
+        <li>गावाचा विकास: रस्ते, सार्वजनिक बांधकामे, नाल्यांची देखभाल व इतर सुविधा सुनिश्चित करणे.</li>
+        <li>शासनाच्या योजनांची अंमलबजावणी: केंद्र व राज्य सरकारच्या योजना गावापर्यंत पोहोचवणे.</li>
+      </ul>
+    </div>
+
+    <div class="info-card fade-in">
+      <h3>🕐 कार्यालयीन वेळा</h3>
+      <p><strong>सोमवार - शनिवार:</strong> सकाळी 09:45 — सायंकाळी 05:45</p>
+      <p style="margin-top:10px;"><strong>संपर्क:</strong> 📞 +91 8766737765 | ✉️ Utturgram@gmail.com</p>
+    </div>
+
+    <div class="section-title fade-in" style="margin-top: 50px;">
+      <h2>सविस्तर माहिती</h2>
+    </div>
+    <div class="stats-grid" id="statsGrid"></div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="components.js"></script>
+  <script>
+    document.getElementById('site-header').innerHTML = renderHeader('about.html');
+    document.getElementById('page-hero').innerHTML = renderPageHero('ग्रामपंचायत विषयी', 'उत्तूर ग्रामपंचायतीची सविस्तर माहिती', 'ग्रामपंचायत');
+    document.getElementById('site-footer').innerHTML = renderFooter();
+
+    const stats = [
+      { label: 'ग्रामपंचायत', value: 'उत्तूर' },
+      { label: 'ग्रामपंचायत स्थापना', value: '१४/०५/१९५२' },
+      { label: 'क्षेत्रफळ', value: '८ हेक्टर २२ आर' },
+      { label: 'तालुका', value: 'आजरा' },
+      { label: 'जिल्हा', value: 'कोल्हापूर' },
+      { label: 'राज्य', value: 'महाराष्ट्र' },
+      { label: 'लोकसंख्या', value: '७७८० (२०११)' },
+      { label: 'पुरुष', value: '३८०८' },
+      { label: 'स्त्री', value: '३९७२' },
+      { label: 'कुटुंब संख्या', value: '२२७०' },
+      { label: 'मतदारांची संख्या', value: '७३८३' },
+      { label: 'लागवडी योग्य क्षेत्र', value: '७२३ हेक्टर ७ आर' },
+      { label: 'बागायत क्षेत्र', value: '-' },
+      { label: 'स्ट्रीट लाईट पोल', value: '५४६' },
+      { label: 'अंगणवाडी', value: '४' },
+      { label: 'जिल्हा परिषद शाळा', value: '२' },
+      { label: 'पोस्ट ऑफिस', value: '१' },
+      { label: 'तलाठी ऑफिस', value: '१' },
+      { label: 'आरोग्य उपकेंद्र', value: '१' },
+      { label: 'नळ कनेक्शन', value: '१८७५' },
+      { label: 'सार्वजनिक विहीर', value: '२' },
+      { label: 'सार्वजनिक बोअर', value: '५' },
+      { label: 'महिला बचत गट', value: '१००+' },
+      { label: 'प्रधानमंत्री घरकुल', value: '११' },
+    ];
+
+    const grid = document.getElementById('statsGrid');
+    stats.forEach((s, i) => {
+      grid.innerHTML += `<div class="stat-item fade-in"><div class="label">${s.label}</div><div class="value">${s.value}</div></div>`;
+    });
+
+    const btn = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('navLinks');
+    if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+    const obs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

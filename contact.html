@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="उत्तूर ग्रामपंचायत संपर्क - पत्ता, फोन, ईमेल आणि Google Map">
+  <title>संपर्क - Uttur Grampanchayat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="page-hero"></div>
+
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>संपर्क</h2>
+      <p>आम्हाला संपर्क साधा</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card fade-in">
+        <img src="Images/grampachayat.jpeg" alt="ग्रामपंचायत कार्यालय" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px;">
+        <h3>🏢 ग्रामपंचायत कार्यालय</h3>
+        <div class="contact-line"><strong>पत्ता:</strong> उत्तूर ग्रामपंचायत, ता. अजरा, जि. कोल्हापूर</div>
+        <div class="contact-line"><strong>फोन:</strong> <a href="tel:+918766737765" style="color:var(--navy);text-decoration:none;">+91 8766737765</a></div>
+        <div class="contact-line"><strong>ईमेल:</strong> <a href="mailto:Utturgram@gmail.com" style="color:var(--navy);text-decoration:none;">Utturgram@gmail.com</a></div>
+        <div class="contact-line"><strong>वेळ:</strong> सकाळी 09:45 — सायंकाळी 05:45 (सोम-शनि)</div>
+      </div>
+
+      <div class="contact-card fade-in">
+        <img src="Images/uttur_police_station.jpeg" alt="पोलिस स्टेशन उत्तूर" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px;">
+        <h3>👮 पोलिस स्टेशन उत्तूर</h3>
+        <div class="contact-line"><strong>पत्ता:</strong> उत्तूर पोलीस स्टेशन, ता. आजरा, जि. कोल्हापूर</div>
+        <div class="contact-line"><strong>फोन:</strong> <a href="tel:02323246133" style="color:var(--navy);text-decoration:none;">02323-246133</a></div>
+        <div class="contact-line"><strong>ईमेल:</strong> <a href="mailto:ajaraps.kop@mahapolice.gov.in" style="color:var(--navy);text-decoration:none;">ajaraps.kop@mahapolice.gov.in</a></div>
+        <div class="contact-line"><strong>सेवा:</strong> 24x7 आपत्कालीन सेवा उपलब्ध</div>
+      </div>
+    </div>
+
+    <div class="map-container fade-in">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15586.5!2d74.22!3d16.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10e!2sUttur!5e0!3m2!1sen!2sin!4v1700000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map - Uttur"></iframe>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="components.js"></script>
+  <script>
+    document.getElementById('site-header').innerHTML = renderHeader('contact.html');
+    document.getElementById('page-hero').innerHTML = renderPageHero('संपर्क', 'ग्रामपंचायत कार्यालयाशी संपर्क साधा', 'संपर्क');
+    document.getElementById('site-footer').innerHTML = renderFooter();
+    const btn = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('navLinks');
+    if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+    const obs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

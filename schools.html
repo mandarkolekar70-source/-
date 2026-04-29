@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="उत्तूर गावातील शाळांची माहिती - विद्यार्थी संख्या आणि शिक्षक">
+  <title>शाळा - Uttur Grampanchayat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="page-hero"></div>
+
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>उत्तूरमधील शाळा</h2>
+      <p>गावातील शैक्षणिक संस्थांची माहिती</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 25px;" id="schoolsGrid"></div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="components.js"></script>
+  <script>
+    document.getElementById('site-header').innerHTML = renderHeader('schools.html');
+    document.getElementById('page-hero').innerHTML = renderPageHero('शाळा', 'उत्तूर गावातील शैक्षणिक संस्था', 'शाळा');
+    document.getElementById('site-footer').innerHTML = renderFooter();
+
+    const schools = [
+      { name: 'कन्या विद्यामंदिर, उत्तूर', students: 165, teachers: 8, img: 'kanya_uttur.jpeg' },
+      { name: 'केंद्र शाळा, मुले, उत्तूर', students: 170, teachers: 8, img: 'kumar_uttur.jpeg' },
+      { name: 'उत्तूर विद्यालय, उत्तूर', students: 280, teachers: 10, img: 'uttur_vidyalay_uttur.jpeg' },
+      { name: 'अरविंद विद्या मंदिर, उत्तूर', students: 75, teachers: 4, img: 'uttur_vidyalay_uttur.jpeg' },
+      { name: 'वसंतदादा पाटील विद्यालय, उत्तूर', students: 94, teachers: 6, img: 'vasantdada.jpeg' },
+      { name: 'पार्वती शंकर विद्यालय, उत्तूर', students: 438, teachers: 13, img: 'parvati_shankar_vidyalay_uttur.jpeg' },
+      { name: 'नवजीवन विद्यालय, उत्तूर', students: 115, teachers: 7, img: 'navjivan.jpeg' },
+      { name: 'नव कृष्णा व्हॅली, उत्तूर', students: 378, teachers: 14, img: 'nav_krishna_valley.jpeg' },
+    ];
+
+    const grid = document.getElementById('schoolsGrid');
+    schools.forEach((s, i) => {
+      const imgHtml = s.img ? `<img src="Images/${s.img}" alt="${s.name}" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 15px;">` : '';
+      grid.innerHTML += `
+        <div class="detail-card fade-in">
+          ${imgHtml}
+          <h3>🏫 ${s.name}</h3>
+          <div class="info-line">👨‍🎓 विद्यार्थी संख्या: <strong style="color:var(--navy)">${s.students}</strong></div>
+          <div class="info-line">👨‍🏫 शिक्षक: <strong style="color:var(--navy)">${s.teachers}</strong></div>
+        </div>`;
+    });
+
+    const btn = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('navLinks');
+    if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+    const obs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

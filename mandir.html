@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="उत्तूर गावातील प्रार्थनीय स्थळे - मंदिरे आणि धार्मिक स्थळे">
+  <title>प्रार्थनीय स्थळे - Uttur Grampanchayat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="page-hero"></div>
+
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>उत्तूरमधील प्रार्थनीय स्थळे</h2>
+      <p>गावातील धार्मिक आणि सांस्कृतिक वारसा</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;" id="mandirGrid"></div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="components.js"></script>
+  <script>
+    document.getElementById('site-header').innerHTML = renderHeader('mandir.html');
+    document.getElementById('page-hero').innerHTML = renderPageHero('प्रार्थनीय स्थळे', 'उत्तूर गावातील धार्मिक स्थळे', 'प्रार्थनीय स्थळे');
+    document.getElementById('site-footer').innerHTML = renderFooter();
+
+    const temples = [
+      { name: 'महालक्ष्मी मंदिर, उत्तूर', icon: '🙏', img: 'laxmi_mandir.jpeg' },
+      { name: 'जोमकाई मंदिर, उत्तूर', icon: '🙏', img: 'jomkai_devi.jpeg' },
+      { name: 'गणपती मंदिर, उत्तूर', icon: '🙏', img: 'ganpati_mandir.jpeg' },
+      { name: 'महादेव मंदिर, उत्तूर', icon: '🙏', img: 'mahadev_mandir.jpeg' },
+      { name: 'हनुमान मंदिर, उत्तूर', icon: '🙏', img: 'hanuman_mandir.jpeg' },
+      { name: 'रेणुका मंदिर, उत्तूर', icon: '🙏', img: 'renuka_mandir.jpeg' },
+      { name: 'विठ्ठल-रुक्मिणी मंदिर', icon: '🙏', img: 'vitthal.jpg' },
+      { name: 'उत्तूर मस्जिद', icon: '🕌', img: 'uttur_masjid.jpeg' },
+      { name: 'मरगुबाई देवी मंदिर', icon: '🙏', img: 'margubai_mandir.jpeg' },
+      { name: 'श्री दत्त मंदिर', icon: '🙏', img: 'datta_mandir.jpeg' },
+      { name: 'महादेव मंदिर, तळेजवळ', icon: '🙏', img: 'tale_mahadev_mandirr.jpeg' },
+    ];
+
+    const grid = document.getElementById('mandirGrid');
+    const colors = ['#0d1b2a','#1b3a4b','#0b3d0b','#2d1b69','#1a1a2e','#003366','#0a2a4a','#16213e','#0d5e06','#1a5c1a','#0f3460'];
+    temples.forEach((t, i) => {
+      let bgStyle = t.img ? `background: url('Images/${t.img}') center/cover no-repeat;` : `background: linear-gradient(135deg, ${colors[i % colors.length]}, ${colors[(i+3) % colors.length]});`;
+      grid.innerHTML += `
+        <div class="place-card fade-in">
+          <div class="place-img" style="${bgStyle}">
+            ${t.img ? '' : `<span style="font-size: 60px;">${t.icon}</span>`}
+          </div>
+          <div class="place-info">
+            <h3>${t.name}</h3>
+          </div>
+        </div>`;
+    });
+
+    const btn = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('navLinks');
+    if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+    const obs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

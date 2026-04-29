@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="उत्तूर ग्रामपंचायत सदस्यांची माहिती - सर्व सदस्य आणि ग्रामविकास अधिकारी">
+  <title>सदस्यांची माहिती - Uttur Grampanchayat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="page-hero"></div>
+
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>उत्तूर ग्रामपंचायत सदस्य</h2>
+      <p>गावाच्या विकासासाठी समर्पित सदस्य</p>
+    </div>
+    <div class="members-grid" id="membersGrid"></div>
+
+    <div style="margin-top: 50px;">
+      <div class="section-title fade-in">
+        <h2>ग्रामविकास अधिकारी</h2>
+      </div>
+      <div class="members-grid" style="max-width: 400px; margin: 0 auto;">
+        <div class="member-card fade-in" style="border-top: 4px solid var(--saffron);">
+          <div class="member-avatar" style="background: linear-gradient(135deg, var(--saffron), var(--gold));"><img src="Images/gramsevak.png" alt="श्री. प्रकाश खिरु पाटील"></div>
+          <h3>श्री. प्रकाश खिरु पाटील</h3>
+          <span class="designation">ग्रामविकास अधिकारी</span>
+          <a href="tel:7057304944" class="phone">📞 7057304944</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px;">
+      <div class="section-title fade-in">
+        <h2>ग्रामपंचायत कर्मचारी माहिती</h2>
+      </div>
+      <div class="table-wrapper fade-in">
+        <table class="premium-table">
+          <thead>
+            <tr>
+              <th style="width: 80px;">अ.क्र.</th>
+              <th>नाव</th>
+              <th>पद</th>
+              <th>संपर्क क्रमांक</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>१</td><td>श्री. अशोक फाळके</td><td>लिपिक</td><td>९६३७२१८५२१</td></tr>
+            <tr><td>२</td><td>श्री. संजय पाटील</td><td>लिपिक</td><td>८४८५०१५४०८</td></tr>
+            <tr><td>३</td><td>श्री. महादेव पाटील</td><td>लिपिक</td><td>९६६५८८१५२६</td></tr>
+            <tr><td>४</td><td>श्री. महादेव मोरवाडकर</td><td>शिपाई</td><td>७०६६१६०२६४</td></tr>
+            <tr style="background: rgba(240, 165, 0, 0.1); font-weight: bold;"><td colspan="4" style="text-align: center;">हंगामी कर्मचारी</td></tr>
+            <tr><td>५</td><td>श्री. आनंदा कुंभार</td><td>सफाई कामगार</td><td>-</td></tr>
+            <tr><td>६</td><td>श्री. लक्ष्मण नाईक</td><td>सफाई कामगार</td><td>-</td></tr>
+            <tr><td>७</td><td>श्री. अमृत रेडेकर</td><td>वाहन चालक</td><td>९०४९२२०६६१</td></tr>
+            <tr><td>८</td><td>श्री. राजेंद्र भाईगडे</td><td>वाहन चालक</td><td>८९७५८४७८६९</td></tr>
+            <tr><td>९</td><td>श्री. विलास कांबळे</td><td>सफाई कामगार</td><td>-</td></tr>
+            <tr><td>१०</td><td>श्री. चंद्रकांत इंगळे</td><td>सफाई कामगार</td><td>९६७३०७४९७०</td></tr>
+            <tr><td>११</td><td>श्री. सुरेश मुळीक</td><td>इलेक्ट्रीशियन</td><td>७३८५५८३२५५</td></tr>
+            <tr><td>१२</td><td>सौ. दिपा गुरव</td><td>संगणक परिचालिका</td><td>९५०३३२६९७५</td></tr>
+            <tr><td>१३</td><td>श्री. बाळू यमगेकर</td><td>पाणी पुरवठा</td><td>८९८३०८८५०४</td></tr>
+            <tr><td>१४</td><td>श्री. अमोल मुळीक</td><td>पाणी पुरवठा</td><td>९५६१६१८१९६</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="components.js"></script>
+  <script>
+    document.getElementById('site-header').innerHTML = renderHeader('members.html');
+    document.getElementById('page-hero').innerHTML = renderPageHero('सदस्यांची माहिती', 'ग्रामपंचायत सदस्य आणि अधिकारी', 'सदस्य');
+    const imageMap = {
+      'श्री. किरण आमणगी': 'Images/sarpanch.png',
+      'सौ. सुनिता हत्तरगे': 'Images/सौ. सुनिता हत्तरगे.png',
+      'श्री. महेश करंबळी': 'Images/sadasya_1_New.png',
+      'श्री. संजय उत्तूरकर': 'Images/sadasya_10_New.png',
+      'श्री. राजाराम खोराटे': 'Images/sadasya_11_New.png',
+      'श्री. भैरू कुंभार': 'Images/sadasya_12_New.png',
+      'मिलिंद कोळेकर': 'Images/sadasya_2_New.png',
+      'श्री. संभाजी कुराडे': 'Images/sadasya_13_New.png',
+      'श्री. सुशांत आमणगी': 'Images/sadasya_14.png',
+      'श्री. संदेश रायकर': 'Images/sadasya_15_New.png',
+      'सौ. समिक्षा देसाई': 'Images/dsarpanch.png',
+      'सौ. सुवर्णा नाईक': 'Images/sadasya_4_New.png',
+      'सौ. लता गुरव': 'Images/sadasya_6_New.png',
+      'श्रीमती. अनिता घोडके': 'Images/sadasya_3_New.png',
+      'सौ. सुनिता केसरकर': 'Images/sadasya_7_New.png',
+      'सौ. आशाताई पाटील': 'Images/sadasya_9_New.png',
+      'सौ. सरिता कुरुणकर': 'Images/sadasya_5_New.png',
+      'सौ. सविता सावंत': 'Images/sadasya_16_New.png'
+    };
+
+    const members = [
+      { name: 'श्री. किरण आमणगी', phone: '9890078547', role: 'सरपंच' },
+      { name: 'सौ. सुनिता हत्तरगे', phone: '9665429017', role: 'उपसरपंच' },
+      { name: 'श्री. महेश करंबळी', phone: '9975469529', role: 'सदस्य' },
+      { name: 'श्री. संजय उत्तूरकर', phone: '9765783498', role: 'सदस्य' },
+      { name: 'श्री. राजाराम खोराटे', phone: '8007225593', role: 'सदस्य' },
+      { name: 'श्री. भैरू कुंभार', phone: '9765936404', role: 'सदस्य' },
+      { name: 'मिलिंद कोळेकर', phone: '9145594770', role: 'सदस्य' },
+      { name: 'श्री. संभाजी कुराडे', phone: '7276306455', role: 'सदस्य' },
+      { name: 'श्री. सुशांत आमणगी', phone: '9028098577', role: 'सदस्य' },
+      { name: 'श्री. संदेश रायकर', phone: '9175878796', role: 'सदस्य' },
+      { name: 'सौ. समिक्षा देसाई', phone: '9028083075', role: 'सदस्य' },
+      { name: 'सौ. सुवर्णा नाईक', phone: '9175181919', role: 'सदस्य' },
+      { name: 'सौ. लता गुरव', phone: '9021235970', role: 'सदस्य' },
+      { name: 'श्रीमती. अनिता घोडके', phone: '9604669798', role: 'सदस्य' },
+      { name: 'सौ. सुनिता केसरकर', phone: '9923658767', role: 'सदस्य' },
+      { name: 'सौ. आशाताई पाटील', phone: '9552991073', role: 'सदस्य' },
+      { name: 'सौ. सरिता कुरुणकर', phone: '9637113491', role: 'सदस्य' },
+      { name: 'सौ. सविता सावंत', phone: '9850657258', role: 'सदस्य' },
+    ];
+
+    const grid = document.getElementById('membersGrid');
+    members.forEach((m, i) => {
+      const hasImg = imageMap[m.name];
+      const avatarContent = hasImg
+        ? `<img src="${imageMap[m.name]}" alt="${m.name}">`
+        : '👤';
+      grid.innerHTML += `
+        <div class="member-card fade-in" style="animation-delay: ${i * 50}ms">
+          <div class="member-avatar">${avatarContent}</div>
+          <h3>${m.name}</h3>
+          <span class="designation">${m.role}</span>
+          <a href="tel:${m.phone}" class="phone">📞 ${m.phone}</a>
+        </div>`;
+    });
+
+    // Init
+    const btn = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('navLinks');
+    if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+  </script>
+</body>
+</html>
