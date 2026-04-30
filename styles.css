@@ -632,13 +632,16 @@ body {
   
   /* Header & Logo Scaling */
   .site-header { 
-    background: linear-gradient(to right, #FF9933, #FFCC33); 
+    background: linear-gradient(to right, #FF9933, #FFCC33) !important; 
     padding: 12px 0;
+    position: relative;
+    z-index: 1005 !important;
   }
   .logo-section { width: 100%; justify-content: flex-start; gap: 12px; }
   .logo-img { 
     background: white; padding: 4px; border-radius: 50%; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 50px; height: 50px;
   }
   .logo-text h1 { 
     font-size: 1.3rem; color: #000; font-weight: 800; 
@@ -650,21 +653,56 @@ body {
     background: transparent;
     box-shadow: none;
     margin-top: -5px;
+    position: relative;
+    z-index: 1006 !important;
   }
   .nav-inner { justify-content: flex-start; padding: 0 15px; }
   .hamburger { 
-    background: #ffffff33; 
-    border: 2px solid #00000044; 
+    background: #ffffff66; 
+    border: 2px solid #00000066; 
     border-radius: 10px;
     padding: 8px 12px;
+    position: relative;
+    z-index: 1007 !important;
   }
-  .hamburger span { background: #000; }
+  .hamburger span { background: #000 !important; }
+  .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); background: #c00 !important; }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: #c00 !important; }
   
-  /* Marquee Clutter Fix */
-  .marquee-wrapper { padding: 8px 0; background: #fff; }
-  .marquee-content { gap: 15px; }
-  .marquee-img { width: 24px; height: 24px; }
-  .marquee-item { font-size: 0.85rem; gap: 6px; }
+  .nav-overlay {
+    position: fixed; inset: 0;
+    background: linear-gradient(180deg, #FF9933 0%, #FFFFFF 50%, #138808 100%) !important;
+    z-index: 999; opacity: 0; visibility: hidden; transition: 0.4s;
+  }
+  .nav-overlay.open { opacity: 1; visibility: visible; }
+
+  .nav-links {
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    width: 92%; max-width: 350px; height: auto;
+    background: white !important; border-radius: 20px;
+    flex-direction: column; padding: 30px 20px;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.3) !important;
+    z-index: 1010 !important; opacity: 0; visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex !important;
+  }
+  .nav-links.open { transform: translate(-50%, -50%); opacity: 1; visibility: visible; }
+  
+  .nav-links a {
+    color: #1a1a1a !important;
+    text-align: left;
+    padding: 15px 12px;
+    font-size: 1.15rem;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+  }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-links a:hover, .nav-links a.active { background: #f5f5f5; color: #e67e22 !important; padding-left: 20px; }
 
   /* Premium Tables Adjustments */
   .table-wrapper { 
