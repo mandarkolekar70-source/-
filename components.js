@@ -32,10 +32,9 @@ function renderHeader(activePage) {
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo-section">
-        <div class="logo-emblem">क</div>
+        <img src="Images/uttur-logo1.PNG" class="logo-img" alt="Logo" style="width: 50px; height: 50px; object-fit: contain;">
         <div class="logo-text">
-          <h1>ग्रामपंचायत उत्तूर</h1>
-          <p>ता. आजरा, जि. कोल्हापूर</p>
+          <h1>ग्रामपंचायत उत्तूर || क ||</h1>
         </div>
       </a>
       <div class="header-contact">
